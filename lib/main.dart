@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 void main() {
   runApp(XylophoneApp());
@@ -9,664 +10,126 @@ class XylophoneApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.blue.shade900,
         body: SafeArea(
           child: Container(
-            color: Colors.blue,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 3),
-                  color: Colors.blue.shade900,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 80.0,
-                        child: Container(
-                          padding: EdgeInsets.fromLTRB(10, 35, 0, 5),
-                          child: Text(
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 40.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              'CHAT'),
+                  height: 80.0,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30.0),
+                    child: Text(
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40.0,
+                          fontWeight: FontWeight.bold,
                         ),
-                      ),
-                      Container(
-                        height: 80.0,
-                        decoration: BoxDecoration(
-                            color: Colors.blue.shade800,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(20),
-                                topRight: Radius.circular(20))),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                  padding: EdgeInsets.fromLTRB(10, 15, 10, 15),
-                                  child: ListView(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.fromLTRB(
-                                            5, 0, 5, 0),
-                                        child: Container(
-                                          height: 50,
-                                          width: 50,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Colors.green,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                    scrollDirection: Axis.horizontal,
-                                  )),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                          padding: EdgeInsets.fromLTRB(10, 5, 5, 10),
-                          height: 80.0,
-                          decoration: BoxDecoration(
-                              color: Colors.blue.shade800,
-                              borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(20),
-                                  bottomRight: Radius.circular(20))),
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 20,
-                                width: 80,
-                                color: Colors.cyan,
-                              ),
-                              SizedBox(
-                                width: 30.0,
-                              ),
-                              Container(
-                                height: 20,
-                                width: 80,
-                                color: Colors.cyan,
-                              ),
-                              SizedBox(
-                                width: 30.0,
-                              ),
-                              Container(
-                                height: 20,
-                                width: 80,
-                                color: Colors.cyan,
-                              ),
-                            ],
-                          )),
-                    ],
+                        'CHAT'),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                      color: Colors.blue.shade900,
-                      child: ListView(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20.0),
+                          topLeft: Radius.circular(20.0)),
+                      color: Colors.grey.shade400,
+                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 160.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(20.0),
+                                topLeft: Radius.circular(20.0),
+                                bottomLeft: Radius.circular(20),
+                                bottomRight: Radius.circular(20)),
+                            color: Colors.white,
+                          ),
+                          child: Column(
+                            children: [
+                              Container(
+                                  margin: EdgeInsets.only(left: 10.0),
+                                  height: 80.0,
+                                  child: ListView(
+                                    scrollDirection: Axis.horizontal,
                                     children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
+                                      DottedBorder(
+                                        color: Colors.blue,
+                                        strokeWidth: 1,
+                                        borderType: BorderType.Circle,
+                                        child: Center(
+                                          child: Container(
+                                              height: 50,
+                                              width: 50,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                              ),
+                                              child: Center(
+                                                child: Icon(
+                                                  Icons.add,
+                                                  color: Colors.blue,
+                                                  size: 40.0,
+                                                ),
+                                              )),
                                         ),
                                       ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
                                       Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
+                                        height: 50,
+                                        width: 50,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
                                         ),
                                       )
                                     ],
-                                  )
-                                ],
-                              ),
-                            ),
+                                  )),
+                              Container(
+                                margin: EdgeInsets.only(left: 10.0),
+                                height: 80,
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      'ALL',
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 30.0,
+                                    ),
+                                    Text(
+                                      'Family',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 20.0,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 30.0,
+                                    ),
+                                    Text(
+                                      'Buddies',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 20.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
-                              height: 80,
-                              decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 50),
-                                        height: 60,
-                                        width: 60,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 20.0,
-                                      ),
-                                      Container(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  height: 20,
-                                                  width: 90,
-                                                  color: Colors.green),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      5, 0, 0, 8),
-                                              child: Container(
-                                                  padding: EdgeInsets.symmetric(
-                                                      vertical: 5),
-                                                  width: 60,
-                                                  height: 20.0,
-                                                  color: Colors.green.shade900),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                        scrollDirection: Axis.vertical,
-                      )),
-                )
+                        ),
+                        Container()
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
