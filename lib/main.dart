@@ -174,30 +174,61 @@ class XylophoneApp extends StatelessWidget {
                               child: ListView(
                             scrollDirection: Axis.vertical,
                             children: [
-                              Container(
-                                child: Row(
-                                  children: [
-                                    Avater(
-                                      imageProvider: AssetImage('images/1.jpg'),
-                                      height: 50,
-                                      width: 50,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          'Azar hosenni',
-                                          style: kTitleStyle,
-                                        ),
-                                        Text('hello')
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              )
+                              textTile(
+                                lastSMS: 'hello',
+                                ChatName: 'ngwa melissa',
+                                imageNumber: 1,
+                              ),
+                              textTile(
+                                lastSMS: 'good afternoon',
+                                ChatName: 'martha',
+                                imageNumber: 2,
+                              ),
+                              textTile(
+                                lastSMS: 'good night',
+                                ChatName: 'Beyounce',
+                                imageNumber: 3,
+                              ),
+                              textTile(
+                                lastSMS: 'how are you doing',
+                                ChatName: 'Sandra',
+                                imageNumber: 5,
+                              ),
+                              textTile(
+                                lastSMS: 'i have being busy the whole day',
+                                ChatName: 'Celine',
+                                imageNumber: 6,
+                              ),
+                              textTile(
+                                lastSMS: 'i am on my way',
+                                ChatName: 'larissa',
+                                imageNumber: 7,
+                              ),
+                              textTile(
+                                lastSMS: 'i am home',
+                                ChatName: 'Farida',
+                                imageNumber: 8,
+                              ),
+                              textTile(
+                                lastSMS: 'hey call me when u see this',
+                                ChatName: 'linda',
+                                imageNumber: 9,
+                              ),
+                              textTile(
+                                lastSMS: 'i have being busy the whole day',
+                                ChatName: 'Celine',
+                                imageNumber: 6,
+                              ),
+                              textTile(
+                                lastSMS: 'i am on my way',
+                                ChatName: 'larissa',
+                                imageNumber: 7,
+                              ),
+                              textTile(
+                                lastSMS: 'i am home',
+                                ChatName: 'Farida',
+                                imageNumber: 8,
+                              ),
                             ],
                           )),
                         )
@@ -209,6 +240,47 @@ class XylophoneApp extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class textTile extends StatelessWidget {
+  textTile(
+      {required this.ChatName,
+      required this.imageNumber,
+      required this.lastSMS});
+  int imageNumber;
+  String ChatName;
+  String lastSMS;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        children: [
+          Avater(
+            imageProvider: AssetImage('images/$imageNumber.jpg'),
+            height: 50,
+            width: 50,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                margin: EdgeInsets.only(left: 14.0),
+                child: Text(
+                  ChatName,
+                  style: kTitleStyle,
+                ),
+              ),
+              Container(
+                  margin: EdgeInsets.only(top: 4.0, left: 14.0),
+                  child: Text(lastSMS, style: kTextStyle))
+            ],
+          )
+        ],
       ),
     );
   }
@@ -229,7 +301,7 @@ class Avater extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           image: DecorationImage(
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
             image: imageProvider,
           ),
         ));
