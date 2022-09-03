@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'constants.dart';
 
 void main() {
   runApp(XylophoneApp());
@@ -35,7 +36,7 @@ class XylophoneApp extends StatelessWidget {
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(20.0),
                           topLeft: Radius.circular(20.0)),
-                      color: Colors.grey.shade400,
+                      color: Colors.grey.shade200,
                     ),
                     child: Column(
                       children: [
@@ -52,7 +53,9 @@ class XylophoneApp extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
-                                  margin: EdgeInsets.only(left: 10.0),
+                                  margin: EdgeInsets.only(
+                                    left: 10.0,
+                                  ),
                                   height: 80.0,
                                   child: ListView(
                                     scrollDirection: Axis.horizontal,
@@ -77,14 +80,54 @@ class XylophoneApp extends StatelessWidget {
                                               )),
                                         ),
                                       ),
-                                      Avater(imageProvider:AssetImage('images/1.jpg'),height: 55,width: 55,),
-                                      Avater(imageProvider:AssetImage('images/2.jpg'),height: 55,width: 55,),
-                                      Avater(imageProvider:AssetImage('images/3.jpg'),height: 55,width: 55,),
-                                      Avater(imageProvider:AssetImage('images/5.jpg'),height: 55,width: 55,),
-                                      Avater(imageProvider:AssetImage('images/6.jpg'),height: 55,width: 55,),
-                                      Avater(imageProvider:AssetImage('images/7.jpg'),height: 55,width: 55,),
-                                      Avater(imageProvider:AssetImage('images/8.jpg'),height: 55,width: 55,),
-                                      Avater(imageProvider:AssetImage('images/9.jpg'),height: 55,width: 55,),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/1.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/2.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/3.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/5.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/6.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/7.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/8.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
+                                      Avater(
+                                        imageProvider:
+                                            AssetImage('images/9.jpg'),
+                                        height: 55,
+                                        width: 55,
+                                      ),
                                     ],
                                   )),
                               Container(
@@ -126,7 +169,38 @@ class XylophoneApp extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Container()
+                        Expanded(
+                          child: Container(
+                              child: ListView(
+                            scrollDirection: Axis.vertical,
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Avater(
+                                      imageProvider: AssetImage('images/1.jpg'),
+                                      height: 50,
+                                      width: 50,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          'Azar hosenni',
+                                          style: kTitleStyle,
+                                        ),
+                                        Text('hello')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          )),
+                        )
                       ],
                     ),
                   ),
@@ -141,22 +215,23 @@ class XylophoneApp extends StatelessWidget {
 }
 
 class Avater extends StatelessWidget {
-  Avater({required this.imageProvider, required this.height, required this.width})
-    ImageProvider imageProvider;
-   double height;
-   double width;
+  Avater(
+      {required this.imageProvider, required this.height, required this.width});
+  ImageProvider imageProvider;
+  double height;
+  double width;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(4.0),
-      height: height,
-      width: width,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        image: DecorationImage(
-            fit: BoxFit.fill, image: imageProvider,
-      ),
-      )
-    );
+        margin: EdgeInsets.all(4.0),
+        height: height,
+        width: width,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: imageProvider,
+          ),
+        ));
   }
 }
