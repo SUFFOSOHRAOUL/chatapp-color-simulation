@@ -77,13 +77,14 @@ class XylophoneApp extends StatelessWidget {
                                               )),
                                         ),
                                       ),
-                                      Container(
-                                        height: 50,
-                                        width: 50,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                      )
+                                      Avater(imageProvider:AssetImage('images/1.jpg'),height: 55,width: 55,),
+                                      Avater(imageProvider:AssetImage('images/2.jpg'),height: 55,width: 55,),
+                                      Avater(imageProvider:AssetImage('images/3.jpg'),height: 55,width: 55,),
+                                      Avater(imageProvider:AssetImage('images/5.jpg'),height: 55,width: 55,),
+                                      Avater(imageProvider:AssetImage('images/6.jpg'),height: 55,width: 55,),
+                                      Avater(imageProvider:AssetImage('images/7.jpg'),height: 55,width: 55,),
+                                      Avater(imageProvider:AssetImage('images/8.jpg'),height: 55,width: 55,),
+                                      Avater(imageProvider:AssetImage('images/9.jpg'),height: 55,width: 55,),
                                     ],
                                   )),
                               Container(
@@ -135,6 +136,27 @@ class XylophoneApp extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class Avater extends StatelessWidget {
+  Avater({required this.imageProvider, required this.height, required this.width})
+    ImageProvider imageProvider;
+   double height;
+   double width;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(4.0),
+      height: height,
+      width: width,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        image: DecorationImage(
+            fit: BoxFit.fill, image: imageProvider,
+      ),
+      )
     );
   }
 }
